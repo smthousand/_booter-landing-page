@@ -690,6 +690,8 @@ p {
   }
 }
 
+/* 3개 이상의 컴포넌트가 있는 걍우 */
+
 /* Feature */
 
 .tab {
@@ -789,8 +791,6 @@ p {
 }
 
 .box-text {
-  font-size: 0.875rem;
-  line-height: 1.25rem;
   font-weight: 300;
   letter-spacing: -0.025em;
   --tw-text-opacity: 1;
@@ -916,12 +916,28 @@ p {
   margin-bottom: 8rem;
 }
 
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
 .flex {
   display: flex;
 }
 
+.inline-flex {
+  display: inline-flex;
+}
+
 .hidden {
   display: none;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .max-h-0 {
@@ -930,6 +946,10 @@ p {
 
 .w-2\/3 {
   width: 66.666667%;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .max-w-sm {
@@ -948,9 +968,17 @@ p {
   max-width: 42rem;
 }
 
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .scale-90 {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
@@ -960,6 +988,14 @@ p {
 
 .flex-col {
   flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
 }
 
 .items-center {
@@ -1008,6 +1044,10 @@ p {
   border-radius: 1.5rem;
 }
 
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
 .border {
   border-width: 1px;
 }
@@ -1030,6 +1070,11 @@ p {
   border-color: hsl(240 2% 25% / var(--tw-border-opacity));
 }
 
+.border-white {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 255 255 / var(--tw-border-opacity));
+}
+
 .bg-gray-100 {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
@@ -1038,6 +1083,11 @@ p {
 .bg-btYellow {
   --tw-bg-opacity: 1;
   background-color: hsl(57 97% 71% / var(--tw-bg-opacity));
+}
+
+.bg-btBk {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 2% 25% / var(--tw-bg-opacity));
 }
 
 .px-6 {
@@ -1065,12 +1115,35 @@ p {
   padding-bottom: 0.5rem;
 }
 
+.py-24 {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.px-3 {
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+}
+
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
 .pt-12 {
   padding-top: 3rem;
 }
 
 .pt-8 {
   padding-top: 2rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.pb-3 {
+  padding-bottom: 0.75rem;
 }
 
 .text-center {
@@ -1091,22 +1164,23 @@ p {
   line-height: 1.25rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
 }
 
-.font-semibold {
-  font-weight: 600;
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 
-.leading-5 {
-  line-height: 1.25rem;
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.font-semibold {
+  font-weight: 600;
 }
 
 .text-btYellow {
@@ -1127,6 +1201,19 @@ p {
 .text-btBk60 {
   --tw-text-opacity: 1;
   color: hsl(240 3% 74% / var(--tw-text-opacity));
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-50 {
+  opacity: 0.5;
+}
+
+.opacity-25 {
+  opacity: 0.25;
 }
 
 .shadow-lg {
@@ -1175,6 +1262,30 @@ p {
   border-bottom: 1px solid #000;
 }
 
+.ficon:hover {
+  filter: invert(10%) sepia(50%) saturate(2117%) hue-rotate(6deg) brightness(114%) contrast(106%);
+}
+
+.hover\:bg-btBk:hover {
+  --tw-bg-opacity: 1;
+  background-color: hsl(240 2% 25% / var(--tw-bg-opacity));
+}
+
+.hover\:text-white:hover {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.hover\:underline:hover {
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
+.focus\:outline-none:focus {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
 .group:hover .group-hover\:text-btBk {
   --tw-text-opacity: 1;
   color: hsl(240 2% 25% / var(--tw-text-opacity));
@@ -1212,6 +1323,11 @@ p {
     margin-bottom: 4rem;
   }
 
+  .md\:mx-0 {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   .md\:mt-8 {
     margin-top: 2rem;
   }
@@ -1226,6 +1342,10 @@ p {
 
   .md\:mb-0 {
     margin-bottom: 0px;
+  }
+
+  .md\:mr-3 {
+    margin-right: 0.75rem;
   }
 
   .md\:block {
@@ -1278,6 +1398,12 @@ p {
     margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
   }
 
+  .md\:space-x-4 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .md\:border-b-0 {
     border-bottom-width: 0px;
   }
@@ -1304,6 +1430,11 @@ p {
   .md\:text-base {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 
   .md\:hover\:scale-105:hover {
