@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    h1 {@apply text-btBk text-4xl font-extrabold md:text-6xl lg:text-7xl tracking-tight}
+    h2 {@apply text-btBk text-2xl font-semibold md:text-4xl text-center tracking-tight}
+    h3 {@apply text-btBk text-xl font-semibold md:text-2xl tracking-tight}
+    h4 {@apply text-btBk text-lg font-medium md:text-2xl lg:text-3xl tracking-tight}
+    h5 {@apply text-btBk80 text-sm mt-4 text-center md:text-lg md:mt-8 tracking-tight}
+    p {@apply text-btBk80 font-light tracking-tight break-all}
+}
+
+@layer components {
+    /* Feature */
+    .tab {
+        @apply flex justify-center text-center text-btBk border-b md:border-b-0 hover:text-btBk md:w-1/3
+    }
+    .tab-title {
+        @apply py-5 cursor-pointer md:text-lg hover:border-b-2 hover:border-btBk md:hover:transition ease duration-100
+    }
+    .panel {
+        @apply flex flex-col py-5 md:flex-row md:space-x-7
+    }
+}
+
+.text-stroke {
+    text-shadow: 
+        1px 1px 0 #000,
+        -1px -1px 0 #000,  
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+}
+
+#hero {border-bottom: 1px solid #000;}
