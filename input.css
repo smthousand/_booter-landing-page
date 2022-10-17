@@ -11,7 +11,7 @@
     p {@apply text-btBk80 font-light tracking-tight break-all}
 }
 
-@layer components {
+@layer components { /* 3개 이상의 컴포넌트가 있는 걍우 */
     /* Feature */
     .tab {
         @apply flex justify-center text-center text-btBk border-b md:border-b-0 hover:text-btBk md:w-1/3
@@ -28,7 +28,7 @@
         @apply flex flex-col justify-between p-10 space-y-6 rounded-2xl bg-btBk20 md:w-1/3
     }
     .box-text {
-        @apply text-btBk text-sm font-light md:text-lg tracking-tight 
+        @apply text-btBk font-light md:text-lg tracking-tight 
     }
 
     .user {
@@ -55,3 +55,7 @@
 }
 
 #hero {border-bottom: 1px solid #000;}
+.ficon:hover {
+    filter: invert(10%) sepia(50%) saturate(2117%) hue-rotate(6deg) brightness(114%) contrast(106%);
+      
+}
