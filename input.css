@@ -17,10 +17,31 @@
         @apply flex justify-center text-center text-btBk border-b md:border-b-0 hover:text-btBk md:w-1/3
     }
     .tab-title {
-        @apply py-5 cursor-pointer md:text-lg hover:border-b-2 hover:border-btBk md:hover:transition ease duration-100
+        @apply py-5 cursor-pointer md:text-lg hover:border-b-2 hover:border-btBk md:hover:transition duration-100
     }
     .panel {
-        @apply flex flex-col py-5 md:flex-row md:space-x-7
+        @apply flex flex-col py-5 md:flex-row md:space-x-7 pt-0
+    }
+
+    /* User */
+    .box {
+        @apply flex flex-col justify-between p-10 space-y-6 rounded-2xl bg-btBk20 md:w-1/3
+    }
+    .box-text {
+        @apply text-btBk text-sm font-light md:text-lg tracking-tight 
+    }
+
+    .user {
+        @apply flex space-x-3
+    }
+    .user-info {
+        @apply flex flex-col justify-center
+    }
+    .user-name {
+        @apply text-sm font-semibold md:text-base
+    }
+    .user-job {
+        @apply text-xs font-extralight text-btBk80
     }
 }
 
