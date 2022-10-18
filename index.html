@@ -338,9 +338,9 @@
     <!-- Submit Section -->
     <section id="submit" class="bg-btYellow">
       <!-- Submit Container -->
-      <div class="max-w-2xl mx-auto py-24 px-6">
+      <div class="max-w-3xl mx-auto py-24 px-6">
         <p class="mb-2 text-lg text-center text-btBk">
-          아래의 폼을 통해 이메일을 작성해주시면 앱을 다운로드 할 수 있는 링크를 보내드립니다
+          아래의 폼을 통해 이메일을 작성해주시면 앱출시일에 앱을 다운로드 할 수 있는 링크를 보내드립니다
         </p>
         <h2 class="px-3 mb-6 text-3xl font-semibold text-center text-btBk md:text-4xl">
           사전예약에 참여해주세요
@@ -355,7 +355,10 @@
               class="flex-1 px-6 pt-3 pb-3 mb-4 rounded-lg border-1 border-white focus:outline-none md:mr-3 md:mb-0"
               placeholder="이메일을 입력해주세요">
 
-              <input type="submit" class="inline-flex px-6 py-3 font-semibold text-center text-btBk border border-black duration-150 transform rounded-lg cursor-pointer focus:outline-none hover:bg-btBk hover:text-white" value="제출하기">
+              <button id="email"
+              type="text" onclick="subscriptionEmail()"
+              class="inline-flex px-6 py-3 font-semibold text-center text-btBk border border-black duration-150 transform rounded-lg cursor-pointer focus:outline-none hover:bg-btBk hover:text-white" 
+              >제출하기</button>
           </div>
         </form>
       </div>
@@ -374,7 +377,7 @@
             </div>
             <span class="text-white opacity-50 mb-2">부터캠프</span>
             <span class="text-white opacity-25 text-xs">부산광역시 해운대구 센텀동로 45, 7층</span>
-            <span class="text-white opacity-25 text-xs hover:underline"><a href="mailto:teambootercamp.gmail.com">teambootercamp.gmail.com</a></span>
+            <span class="text-white opacity-25 text-xs hover:underline"><a href="mailto:teambootercamp@gmail.com">teambootercamp@gmail.com</a></span>
           </div>
           <!-- SNS -->
           <div class="flex items-end mt-4 md:mt-0">
