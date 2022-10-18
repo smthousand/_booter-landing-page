@@ -1,7 +1,7 @@
 // Firebase Collection
-// Import the functions you need from the SDKs you need
-import firebase from 'firebase/app';
-import 'firebase/firestore';
+import { initializeApp } from "../node_modules/@firebase/app";
+import { getAnalytics } from "../node_modules/@firebase/analytics";
+import '../node_modules/@firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,8 +18,8 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-var app = firebase.initializeApp(firebaseConfig);
-
+var app = initializeApp(firebaseConfig);
+// const app = initializeApp(firebaseConfig);
 const db = firebase.firestore(app);
 // E-mail Subscribes
 // var subscription = firebase.database().ref('subscription_test');
@@ -27,7 +27,7 @@ const db = firebase.firestore(app);
 async function subscriptionEmail (evt) {
   var email = document.getElementById('email');
   
-  db.collection("cities").doc("new-city-id").set(email.text);
+  db.collection("cities").doc("new-city-id").set('test');
   
   console.log("Document written with ID: ", docRef.id);
 }
