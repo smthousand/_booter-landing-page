@@ -1,7 +1,7 @@
 // Firebase Collection
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import firebase from 'firebase/app';
+import 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -18,28 +18,16 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+var app = firebase.initializeApp(firebaseConfig);
 
+const db = firebase.firestore(app);
 // E-mail Subscribes
-var config = {
-    apiKey: "AIzaSyDPw9OGkAk7sfS2AOfD-ZM3i__3sKW4DaE",
-    authDomain: "scc-landing-page.firebaseapp.com",
-    databaseURL: "https://scc-landing-page.firebaseio.com",
-    storageBucket: "scc-landing-page.appspot.com",
-};
-firebase.initializeApp(config);
+// var subscription = firebase.database().ref('subscription_test');
 
-var subscription = firebase.database().ref('subscription_test');
-
-function subscriptionEmail (evt) {
+async function subscriptionEmail (evt) {
   var email = document.getElementById('email');
   
-  // TODO 驗證格式
+  db.collection("cities").doc("new-city-id").set(email.text);
   
-  subscription.push().update({ 
-    email: email.value,
-    createdAt: Date.now()
-  });
-  console.log('done', Date.now(), email.value);
+  console.log("Document written with ID: ", docRef.id);
 }
