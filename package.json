@@ -11,5 +11,8 @@
   "license": "MIT",
   "devDependencies": {
     "tailwindcss": "^3.0.24"
+  },
+  "dependencies": {
+    "firebase": "^9.12.1"
   }
 }
