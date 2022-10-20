@@ -363,7 +363,7 @@
           <div class="flex flex-col justify-between items-center mx-auto md:flex-row md:mx-0">
             <input
               type="email" 
-              class="flex-1 px-6 pt-3 pb-3 mb-4 w-full rounded-lg border-1 border-white focus:outline-none md:mr-3 md:mb-0"
+              class="flex-1 px-6 pt-3 pb-3 mb-4 w-auto rounded-lg border-1 border-white focus:outline-none md:mr-3 md:mb-0"
               placeholder="이메일을 입력해주세요">
 
               <button 
@@ -401,39 +401,6 @@
     <!-- JavaScript -->
     <script src="js/script.js"></script>
     <script type="module" src="js/firebase.js"></script>
-    
 
-    <!-- firebase -->
-    <!-- <script>
-      
-      function 
-      
-      const firebaseConfig = {
-        apiKey: "AIzaSyB3hmzTeIJJn10zX1NOaHkbbuL3QTQwKQY",
-        authDomain: "booter-48243.firebaseapp.com",
-        projectId: "booter-48243",
-        storageBucket: "booter-48243.appspot.com",
-        messagingSenderId: "119279767120",
-        appId: "1:119279767120:web:388364b35d152e6b6f4b55",
-        measurementId: "G-LKL8Z2CXTJ"
-      };
-
-
-      const app = initializeApp(firebaseConfig);
-      // const db = firebase.firestore(app);
-      const db = getFirestore(app);
-
-
-
-      async function subscriptionEmail (e) {
-      var email = document.getElementById('email');
-      
-      db.collection("cities").doc("new-city-id").set('test');
-      
-      console.log("Document written with ID: ", docRef.id);
-    }
-    </script> -->
-
-    
   </body>
 </html>
