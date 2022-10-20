@@ -1,7 +1,6 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-app.js'
 import { getFirestore, collection, getDocs, addDoc } from 'https://www.gstatic.com/firebasejs/9.12.1/firebase-firestore.js'
 
-// TODO: Replace the following with your app's Firebase project configuration
 const firebaseConfig = {
   apiKey: "AIzaSyB3hmzTeIJJn10zX1NOaHkbbuL3QTQwKQY",
   authDomain: "booter-48243.firebaseapp.com",
@@ -19,15 +18,21 @@ const db = getFirestore(app);
 const submitForm = document.querySelector('#submit-form')
 const submitInput = document.querySelector('#submit-form input');
 const submitButton = document.querySelector('#submit-form button');
+const alert = document.querySelector('.alert')
 
 submitButton.onclick = async () => {
-  await subscriptionEmail(submitInput.value);
+  
+  if (submitInput.value === '') {
+    alert.innerHTML('공백은 유효하지 않습니다')
+  } else {
+    await subscriptionEmail(submitInput.value);
+    alert.innerHTML('')
+  }
 }
 async function subscriptionEmail (email) {
-  // const collec = await db.collection("email");
+  email.preventdefault()
   const citiesCol = await addDoc(collection(db, "email"), {email:email});
-  // const citySnapshot = await getDocs("BJSPL4X2X5GcEdXrOYPY");
-  // const cityList = await citySnapshot.docs.map(doc => doc.data());
-  // console.log(cityList)
   console.log(db)
 }
+
+submitForm.addEventListener('submit', subscriptionEmail());
