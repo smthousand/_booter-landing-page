@@ -23,17 +23,3 @@ function onTabClick(e) {
     .getElementsByClassName(classString)[0]
     .classList.remove('hidden')
 }
-
-
-
-// const submitForm = document.querySelector('#submit-form')
-// const submitInput = document.querySelector('#submit-form input');
-// const submitButton = document.querySelector('#submit-form button');
-
-// function submitEmailEvent() {
-//   console.log(submitInput.value)
-// }
-
-
-
-// submitForm.addEventListener('submit', submitEmailEvent);
