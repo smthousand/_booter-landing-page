@@ -1,14 +1,14 @@
 {
-  "name": "simple-tailwind-starter",
+  "name": "booter",
   "version": "1.0.0",
-  "description": "Simple file structure for Tailwind projects",
+  "description": "boter 공식 사전예약 페이지",
   "main": "index.js",
   "scripts": {
     "watch": "tailwindcss -i ./input.css -o ./css/style.css --watch",
     "build": "tailwindcss -i ./input.css -o ./css/style.css"
   },
-  "author": "Brad Traversy",
-  "license": "MIT",
+  "author": "bootercamp",
+  "license": "bootercamp",
   "devDependencies": {
     "tailwindcss": "^3.0.24"
   },
