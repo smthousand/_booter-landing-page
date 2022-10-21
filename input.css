@@ -57,5 +57,4 @@
 #hero {border-bottom: 1px solid #000;}
 .ficon:hover {
     filter: invert(10%) sepia(50%) saturate(2117%) hue-rotate(6deg) brightness(114%) contrast(106%);
-      
 }
