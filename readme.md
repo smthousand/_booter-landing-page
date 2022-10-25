@@ -1,1 +1,1 @@
-booter landing page
+서비스 부터의 랜딩페이지입니다
